@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="WMCalendarAllView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mw2-0v-D4Q">
+                    <rect key="frame" x="53" y="65.5" width="269" height="322"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3nZ-gd-6az">
+                            <rect key="frame" x="0.0" y="59" width="269" height="263"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <connections>
+                                <outlet property="dataSource" destination="iN0-l3-epB" id="Fis-Vh-ZXJ"/>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="GeQ-te-oXX"/>
+                            </connections>
+                        </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxL-CI-bNY">
+                            <rect key="frame" x="0.0" y="-0.5" width="269" height="58"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="回款月份" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCD-zs-LnR">
+                                    <rect key="frame" x="98.5" y="18" width="73.5" height="21.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="pCD-zs-LnR" firstAttribute="centerX" secondItem="jxL-CI-bNY" secondAttribute="centerX" id="LGH-uD-0B6"/>
+                                <constraint firstAttribute="height" constant="58" id="QtV-cL-386"/>
+                                <constraint firstItem="pCD-zs-LnR" firstAttribute="centerY" secondItem="jxL-CI-bNY" secondAttribute="centerY" id="fPz-cH-br9"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="3nZ-gd-6az" firstAttribute="top" secondItem="jxL-CI-bNY" secondAttribute="bottom" constant="1" id="7cv-hS-Orw"/>
+                        <constraint firstItem="3nZ-gd-6az" firstAttribute="leading" secondItem="mw2-0v-D4Q" secondAttribute="leading" id="Kgg-U6-y9j"/>
+                        <constraint firstItem="jxL-CI-bNY" firstAttribute="leading" secondItem="mw2-0v-D4Q" secondAttribute="leading" id="RaF-1l-MNP"/>
+                        <constraint firstItem="jxL-CI-bNY" firstAttribute="top" secondItem="mw2-0v-D4Q" secondAttribute="top" id="VvH-mJ-p36"/>
+                        <constraint firstAttribute="trailing" secondItem="jxL-CI-bNY" secondAttribute="trailing" id="g0Y-6H-1FI"/>
+                        <constraint firstAttribute="trailing" secondItem="3nZ-gd-6az" secondAttribute="trailing" id="qOR-44-anh"/>
+                        <constraint firstAttribute="bottom" secondItem="3nZ-gd-6az" secondAttribute="bottom" id="rYa-rX-kv2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.2342947345890411" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mw2-0v-D4Q" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8xy-XF-s4Q"/>
+                <constraint firstItem="mw2-0v-D4Q" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="315:652" id="iBL-mt-BqX"/>
+                <constraint firstItem="mw2-0v-D4Q" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="269:375" id="rTY-28-Qhl"/>
+                <constraint firstItem="mw2-0v-D4Q" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-107" id="vXb-h6-Ge0"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="popView" destination="mw2-0v-D4Q" id="Ofg-ua-et7"/>
+                <outlet property="tableView" destination="3nZ-gd-6az" id="jhG-m1-IL9"/>
+                <outlet property="titleLable" destination="pCD-zs-LnR" id="a1L-ya-p3S"/>
+            </connections>
+        </view>
+    </objects>
+</document>
