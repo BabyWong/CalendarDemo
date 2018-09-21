@@ -102,7 +102,7 @@
 #pragma mark UIPickerViewDelegate
 // row title
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    [pickerView clearSpearatorLine];
+    [pickerView clearSpearatorLine];// 移除picker下划线
     NSInteger month = 01;
     NSInteger year = 2000;
     if (component == 0) {
